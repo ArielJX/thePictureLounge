@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Artist</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=open sans">
+    <link rel="stylesheet" href="root.css">
+
+
+    <style>
+        /* --------------------------    top navigation bar    --------------------------*/
+        .topnav {
+            overflow: hidden;
+            padding: 0px 4rem;
+            height: 30px
+        }
+
+        /* Style the topnav links */
+        .topnav-left a {
+            float: left;
+            display: block;
+            color: #d6d6d6;
+            ;
+            text-align: center;
+            padding: 0.5rem 1rem 0.5rem 0;
+            text-decoration: none;
+        }
+
+        .topnav-right a {
+            float: right;
+            display: block;
+            color: #d6d6d6;
+            text-align: right;
+            padding: 0.5rem 0 0.5rem 1rem;
+            text-decoration: none;
+        }
+
+
+        /* Style the bottom navigation bar */
+        .botnav {
+            overflow: hidden;
+            height: 80px;
+            padding: 0rem 4rem;
+            position: relative;
+
+        }
+
+        /* Style the botnav links */
+        .botnav-left a {
+            float: left;
+            display: block;
+            color: #d6d6d6;
+            ;
+            text-align: center;
+            padding: 0.5rem 1rem 0.5rem 0;
+            text-decoration: none;
+
+        }
+
+        .botnav-right a {
+            float: right;
+            display: block;
+            position: absolute;
+            top: -1rem;
+            right: 4rem;
+        }
+
+        /* -------------------------     artist list     ------------------------- */
+
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 2rem 4rem 0 4rem;
+            max-width: device-width;
+        }
+
+        .grid-item {
+
+
+            padding: 0.5rem;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+        }
+
+
+
+
+        /* --------------------------      footer     --------------------------- */
+
+        .footer-top {
+            padding: 2rem 0 4rem 0;
+            border-top: #d6d6d6 1px solid;
+            border-bottom: #d6d6d6 1px solid;
+        }
+
+        .footer-column-left {
+            float: left;
+            width: 50%;
+
+        }
+
+        .footer-column-right {
+            float: right;
+            display: block;
+        }
+
+        .footer-icon a {
+            float: right;
+            color: white;
+            padding: 0 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .footer-bot {
+            display: block;
+            width: 100%;
+            max-width: device-width;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  ****************************              **************************** -->
+    <!--  ****************************              **************************** -->
+    <!--  ****************************  navigation  **************************** -->
+    <div class="topnav clearfix">
+        <div class="topnav-left">
+            <a href="#">Account</a>
+            <a href="#"><i class="fa fa-shopping-cart"></i></a>
+            <a href="#"><i class="fa fa-heart"></i></a>
+        </div>
+        <div class="topnav-right">
+            <a href="https://www.facebook.com/ThePictureLounge/"><i class="fa fa-facebook-square"></i></li></a>
+            <a href="#"><i class="fa fa-twitter-square"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <div class="botnav clearfix">
+        <div class="botnav-left">
+            <a href="#">
+                <h4>Artist</h4>
+            </a>
+            <a href="#">
+                <h4>Collection</h4>
+            </a>
+            <a href="#">
+                <h4>About</h4>
+            </a>
+            <a href="#">
+                <h4>Contact</h4>
+            </a>
+            <a href="#">
+                <h4><i class="fa fa-search"></h4></i>
+            </a>
+        </div>
+        <div class="botnav-right">
+            <a href="#">
+                <h1><img src="./Logo_img.png" style="width: 12rem; margin: 0 -1rem 0 0" alt=""></h1>
+            </a>
+        </div>
+    </div>
+
+    <!--  ********************   page heading  ********************* -->
+
+    <div class="container">
+        <div class="heading-container">
+            <h2>Artist</h2>
+        </div>
+    </div>
+
+
+
+    <!--  ********************   artist list   ********************* -->
+    <div class="grid-container">
+        <div class="grid-item">
+            <a href="#"><img src="./CRAIG.jpg" alt=""></a>
+            <a>
+                <p>Craig Potton</p>
+            </a>
+        </div>
+        <div class="grid-item"><a href="#"><img src="./JASON.jpg" alt=""></a><a>
+                <p>Jason Law</p>
+            </a></div>
+        <div class="grid-item"><a href="#"><img src="./CHRISTOPHER.jpg" alt=""></a><a>
+                <p>Christopher Thompson</p>
+            </a></div>
+        <div class="grid-item"><a href="#"><img src="./RACHARD.jpg" alt=""></a><a>
+                <p>Richard Sidey</p>
+            </a></div>
+        <div class="grid-item"><a href="#"><img src="./JACKIE.jpg" alt=""></a><a>
+                <p>Jackie Ranken</p>
+            </a></div>
+        <div class="grid-item"><a href="#"><img src="./MIKE.jpg" alt=""></a><a>
+                <p>Mike Langford</p>
+            </a></div>
+        <div class="grid-item"><a href="#"><img src="./CAMILLA.jpg" alt=""></a><a>
+                <p>Camilla Rutherford</p>
+            </a></div>
+        <div class="grid-item"><a href="#"><img src="./PAUL.jpg" alt=""></a><a>
+                <p>Paul Gummer</p>
+            </a></div>
+        <div class="grid-item"></div>
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--  ********************  footer ********************* -->
+    <div class="container clearfix">
+        <div class="footer-top clearfix">
+            <div class="footer-column-left">
+                <a href="#">
+                    <h4>Artist</h4>
+                </a>
+                <a href="#">
+                    <h4>Collection</h4>
+                </a>
+                <a href="#">
+                    <h4>About</h4>
+                </a>
+                <a href="#">
+                    <h4>Contact</h4>
+                </a>
+            </div>
+            <div class="footer-column-right">
+                <a href="#homepage">
+                    <img src="./Logo_img.png" style="width: 13rem; margin: 0 -1rem 0 0" alt="">
+                </a>
+                <div class="footer-icon">
+                    <a href="https://www.facebook.com/ThePictureLounge/"><i class="fa fa-facebook-square"></i></li>
+                    </a>
+                    <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bot clearfix">
+            <sub>All images © The Picture lounge - NZ Photographers Gallery.</sub>
+
+            <sub>All Rights Reserved. All images remain the exclusive Copyright of the individual photographers and
+                may
+                not
+                be used in any way without the express written authorisation of the respective photographers. Please
+                direct
+                any enquiries to gallery@thepicturelounge.co.nz</sub>
+
+            <sub> NB: If We (The Picture Lounge) are shipping your purchase to a destination outside of New ealand,
+                we
+                are
+                not responsible nor liable for any local taxes, duties or customs charges you may incur at point of
+                entry.
+                Any costs or liability subsequent to the transaction are wholly the responsibility of the Purchaser.
+            </sub>
+        </div>
+
+    </div>
+</body>
+
+</html>

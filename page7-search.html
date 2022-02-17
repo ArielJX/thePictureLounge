@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="root.css">
+
+
+    <style>
+        /* -------------------------    form  ------------------------- */
+
+
+        .subcontainer {
+            display: block;
+            width: 50%;
+            max-width: device-width;
+            padding: calc(0.5rem + 1vmin) calc(2rem + 3vmin);
+            margin: auto;
+        }
+
+        @media only screen and (max-width: 420px) {
+            .subcontainer {
+                display: block;
+                width: 90%;
+                max-width: device-width;
+                padding: calc(0.5rem + 1.5vmin) calc(0.5rem + 3vmin);
+                margin: auto;
+            }
+
+            input[type=text],
+            input[type=date],
+            select {
+                color: #d6d6d6;
+                border: none;
+                padding: 0.2rem 0;
+                text-decoration: none;
+                margin: 0;
+                cursor: pointer;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+                font-size: 0.8rem;
+                font-family: serif;
+
+            }
+
+            .accordion,
+            .subaccordion {
+                color: #d6d6d6;
+                cursor: pointer;
+                padding: calc(0.5rem + 0.5vmin);
+                width: 100%;
+                border: none;
+                border-bottom: solid 1px #d6d6d6;
+                text-align: left;
+                outline: none;
+                transition: 0.4s;
+            }
+
+        }
+
+        @media only screen and (max-width: 1120px) and (min-width: 420px) {
+            .subcontainer {
+                display: block;
+                width: 60%;
+                max-width: device-width;
+                padding: calc(0.5rem + 1.5vmin) calc(0.5rem + 3vmin);
+                margin: auto;
+            }
+
+            input[type=text],
+            input[type=date],
+            select {
+                color: #d6d6d6;
+                border: none;
+                padding: 0.2rem 0;
+                text-decoration: none;
+                margin: 0;
+                cursor: pointer;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                outline: none;
+                font-size: 0.8rem;
+                font-family: serif;
+
+            }
+
+            .accordion,
+            .subaccordion {
+                color: #d6d6d6;
+                cursor: pointer;
+                padding: calc(0.5rem + 0.5vmin);
+                width: 100%;
+                border: none;
+                border-bottom: solid 1px #d6d6d6;
+                text-align: left;
+                outline: none;
+                transition: 0.4s;
+            }
+
+        }
+
+        p {
+            margin: 0;
+            text-align: left;
+            line-height: 1.2rem;
+        }
+
+        .accordion i {
+            float: right;
+            padding: 0.5rem 0;
+            font-size: calc(0.5rem + 1.5vmin);
+        }
+
+        .subaccordion i {
+            float: right;
+            padding: 0.5rem 0;
+            font-size: calc(0.5rem + 1.5vmin);
+        }
+
+        .accordion,
+        .subaccordion {
+            color: #d6d6d6;
+            cursor: pointer;
+            padding: calc(0.5rem + 1.5vmin);
+            width: 100%;
+            border: none;
+            border-bottom: solid 1px #d6d6d6;
+            text-align: left;
+            outline: none;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion,
+        .subaccordion:hover {
+            background-color: black;
+            border-bottom: solid 1px #d6d6d6;
+        }
+
+        .panel {
+            padding: 0 1.2rem;
+            color: #d6d6d6;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .subpanel {
+            text-align: right;
+            color: #d6d6d6;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+
+        input[type=text],
+        input[type=date],
+        select {
+            color: #d6d6d6;
+            border: none;
+            padding: 0.5rem 0;
+            text-decoration: none;
+            margin: 0;
+            cursor: pointer;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            outline: none;
+            font-size: 1.2rem;
+            font-family: serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 1rem 0;
+            max-width: device-width;
+        }
+
+        .grid-item {
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  ****************************              **************************** -->
+    <!--  ****************************              **************************** -->
+    <!--  ****************************  navigation  **************************** -->
+    <div class="topnav clearfix">
+        <div class="topnav-left">
+            <a href="page8-login.html">Account</a>
+            <a href="page12-shoppingcart.html"><i class="fa fa-shopping-cart"></i></a>
+            <a href="page11-Lightbox.html"><i class="fa fa-heart"></i></a>
+        </div>
+        <div class="topnav-right">
+            <a href="https://www.facebook.com/ThePictureLounge/"><i class="fa fa-facebook-square"></i></li></a>
+            <a href="#"><i class="fa fa-twitter-square"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <div class="botnav clearfix">
+        <div class="botnav-left">
+            <a href="page2-artists.html">
+                <h4>Artist</h4>
+            </a>
+            <a href="page4-collection.html">
+                <h4>Collection</h4>
+            </a>
+            <a href="page5-about.html">
+                <h4>About</h4>
+            </a>
+            <a href="page6-contact.html">
+                <h4>Contact</h4>
+            </a>
+            <a href="page7-search.html">
+                <h4><i class="fa fa-search"></h4></i>
+            </a>
+        </div>
+        <div class="botnav-right">
+            <a href="page1-homepage.html">
+                <h1><img src="./Logo_img.png" style="width: 12rem; margin: 0 -1rem 0 0" alt=""></h1>
+            </a>
+        </div>
+    </div>
+
+    <!-- Simulate a smartphone / tablet -->
+    <div class="mobile-container">
+        <div class="mobilenav">
+
+            <a href="page1-homepage.html">
+                <img src="./Logo_img.png" style="width: 8rem" alt="">
+            </a>
+            <div id="myLinks">
+                <a href="page2-artists.html">
+                    Artist
+                </a>
+                <a href="page4-collection.html">
+                    Collection
+                </a>
+                <a href="page5-about.html">
+                    About
+                </a>
+                <a href="page6-contact.html">
+                    Contact
+                </a>
+                <a href="page7-search.html">
+                    <i class="fa fa-search"></i>
+                </a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i> </a>
+
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+    <!--  ********************   page heading  ********************* -->
+    <div class="container">
+        <div class="heading-container">
+            <h2>Search</h2>
+        </div>
+    </div>
+
+
+
+    <!--  ****************** bod section  ***************** -->
+
+    <div class="subcontainer clearfix">
+        <button class="accordion" style="position: relative;"><input type="text" id="myInput"
+                placeholder="Type keywords.." title="Type"><i class="fa fa-search"
+                style="position: absolute; right: calc(0.5rem + 1vmin); top: calc(0.5rem + 1.5vmin)"></i></button>
+
+        <button class="accordion"><span>Advanced Search</span><i class="fa fa-chevron-right"></i></button>
+        <div class="panel">
+            <button class="subaccordion"><span>Date Ranges</span><i class="fa fa-chevron-right"></i></button>
+            <div class="subpanel">
+                <lable>From:</lable>
+                <input type="date" id="start" value="start" value="ddmmyy">
+                <br>
+                <lable>To:</lable>
+                <input type="date" id="start" value="start" value="ddmmyy">
+            </div>
+            <button class="subaccordion"><span>Image Country</span><i class="fa fa-chevron-right"></i></button>
+            <div class="subpanel">
+                <select id="country" name="country">
+                    <option value="Australia"> Australia</option>
+                    <option value="Canada"> Canada</option>
+                    <option value="Cook Islands">Cook Islands</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Great Britain">Great Britain</option>
+                    <option value="Isle of Man">Isle of Man</option>
+                    <option value="New Zealand"> New Zealand</option>
+                </select>
+            </div>
+
+            <button class="subaccordion"><span>Image State</span><i class="fa fa-chevron-right"></i></button>
+            <div class="subpanel">
+                <select id="country" name="country">
+                    <option value="Australia"> Australia State</option>
+                    <option value="Canada"> Canada State</option>
+                    <option value="Cook Islands">Cook Islands State</option>
+                    <option value="Egypt">Egypt State</option>
+                    <option value="Germany">Germany State</option>
+                    <option value="Great Britain">Great Britain State</option>
+                    <option value="Isle of Man">Isle of Man State</option>
+                    <option value="New Zealand"> New Zealand State</option>
+                </select>
+            </div>
+
+
+            <button class="subaccordion"><span>Image City</span><i class="fa fa-chevron-right"></i></button>
+            <div class="subpanel">
+                <select id="country" name="country">
+                    <option value="Australia">Australia City</option>
+                    <option value="Canada"> Canada City</option>
+                    <option value="Cook Islands">Cook Islands City</option>
+                    <option value="Egypt">Egypt City</option>
+                    <option value="Germany">Germany City</option>
+                    <option value="Great Britain">Great Britain City</option>
+                    <option value="Isle of Man">Isle of Man City</option>
+                    <option value="New Zealand"> New Zealand City</option>
+                </select>
+            </div>
+
+
+            <button class="subaccordion"><span>Orientation</span><i class="fa fa-chevron-right"></i></button>
+            <div class="subpanel">
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <input type="checkbox" id="vertical" value="vertical">Vertical
+                    </div>
+                    <div class="grid-item">
+                        <input type="checkbox" id="vertical" value="vertical">Horizental
+                    </div>
+                    <div class="grid-item">
+                        <input type="checkbox" id="vertical" value="vertical">Square
+                    </div>
+                    <div class="grid-item">
+                        <input type="checkbox" id="vertical" value="vertical">Panoramic
+                    </div>
+                </div>
+            </div>
+            <button class="subaccordion"><span>Price Type</span><i class="fa fa-chevron-right"></i></button>
+            <div class="subpanel">
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <input type="checkbox" id="vertical" value="vertical">Print
+                    </div>
+                    <div class="grid-item">
+                        <input type="checkbox" id="vertical" value="vertical">Personal Use
+                    </div>
+                    <div class="grid-item">
+                        <input type="checkbox" id="vertical" value="vertical">Royalty
+                    </div>
+                    <div class="grid-item">
+                        <input type="checkbox" id="vertical" value="vertical">Right-Managed
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "vmax";
+                    }
+                });
+            }
+
+            var acc = document.getElementsByClassName("subaccordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var subpanel = this.nextElementSibling;
+                    if (subpanel.style.maxHeight) {
+                        subpanel.style.maxHeight = null;
+                    } else {
+                        subpanel.style.maxHeight = subpanel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+    </div>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--  ********************  footer ********************* -->
+    <div class="container clearfix">
+        <div class="footer-top clearfix">
+            <div class="footer-column-left">
+                <a href="page2-artists.html">
+                    <h4>Artist</h4>
+                </a>
+                <a href="page4-collection.html">
+                    <h4>Collection</h4>
+                </a>
+                <a href="page5-about.html">
+                    <h4>About</h4>
+                </a>
+                <a href="page6-contact.html">
+                    <h4>Contact</h4>
+                </a>
+            </div>
+            <div class="footer-column-right">
+                <a href="page1-homepage.html">
+                    <h1><img src="./Logo_img.png" style="width: 13rem; margin: 0 -1rem 0 0" alt=""></h1>
+                </a>
+                <div class="footer-icon">
+                    <a href="https://www.facebook.com/ThePictureLounge/"><i class="fa fa-facebook-square"></i></li>
+                    </a>
+                    <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bot clearfix">
+            <sub>ll images © The Picture lounge - NZ Photographers Gallery.</sub>
+
+            <sub>All Rights Reserved. All images remain the exclusive Copyright of the individual photographers and
+                may
+                not
+                be used in any way without the express written authorisation of the respective photographers. Please
+                direct
+                any enquiries to gallery@thepicturelounge.co.nz</sub>
+
+            <sub> NB: If We (The Picture Lounge) are shipping your purchase to a destination outside of New ealand,
+                we
+                are
+                not responsible nor liable for any local taxes, duties or customs charges you may incur at point of
+                entry.
+                Any costs or liability subsequent to the transaction are wholly the responsibility of the Purchaser.
+            </sub>
+        </div>
+
+    </div>
+</body>
+
+</html>

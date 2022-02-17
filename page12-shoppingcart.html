@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shopping Cart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="root.css">
+
+
+    <style>
+        /* -------------------------    body  ------------------------- */
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 0.3fr 1fr 1.2fr 0.3fr;
+            margin: calc(0.5rem + 2.5vmin) 0;
+            max-width: device-width;
+        }
+
+        @media only screen and (max-width: 420px) {
+
+            .grid-container {
+                padding: calc(0.5rem + 0.5vmin) 0;
+                max-width: device-width;
+            }
+        }
+
+        .grid-item {
+            padding: 0 0 calc(0.5rem + 0.5vmin) 0;
+        }
+
+        .grid-subcontainer {
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            padding: 0 0 calc(0.5rem + 0.5vmin) 0;
+            width: 100%;
+            max-width: fit-content;
+        }
+
+        .column-right {
+            float: right;
+            display: block;
+            width: 40%;
+            padding: 0;
+
+        }
+
+        .grid-text {
+            text-align: left;
+            padding: 0 1em 1em 0;
+            width: 190vmin;
+            max-width: max-content;
+        }
+
+        p {
+            margin: 0;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  ****************************              **************************** -->
+    <!--  ****************************              **************************** -->
+    <!--  ****************************  navigation  **************************** -->
+    <div class="topnav clearfix">
+        <div class="topnav-left">
+            <a href="page8-login.html">Account</a>
+            <a href="page12-shoppingcart.html"><i class="fa fa-shopping-cart"></i></a>
+            <a href="page11-Lightbox.html"><i class="fa fa-heart"></i></a>
+        </div>
+        <div class="topnav-right">
+            <a href="https://www.facebook.com/ThePictureLounge/"><i class="fa fa-facebook-square"></i></li></a>
+            <a href="#"><i class="fa fa-twitter-square"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <div class="botnav clearfix">
+        <div class="botnav-left">
+            <a href="page2-artists.html">
+                <h4>Artist</h4>
+            </a>
+            <a href="page4-collection.html">
+                <h4>Collection</h4>
+            </a>
+            <a href="page5-about.html">
+                <h4>About</h4>
+            </a>
+            <a href="page6-contact.html">
+                <h4>Contact</h4>
+            </a>
+            <a href="page7-search.html">
+                <h4><i class="fa fa-search"></h4></i>
+            </a>
+        </div>
+        <div class="botnav-right">
+            <a href="page1-homepage.html">
+                <h1><img src="./Logo_img.png" style="width: 12rem; margin: 0 -1rem 0 0" alt=""></h1>
+            </a>
+        </div>
+    </div>
+
+    <!-- Simulate a smartphone / tablet -->
+    <div class="mobile-container">
+        <div class="mobilenav">
+
+            <a href="page1-homepage.html">
+                <img src="./Logo_img.png" style="width: 8rem" alt="">
+            </a>
+            <div id="myLinks">
+                <a href="page2-artists.html">
+                    Artist
+                </a>
+                <a href="page4-collection.html">
+                    Collection
+                </a>
+                <a href="page5-about.html">
+                    About
+                </a>
+                <a href="page6-contact.html">
+                    Contact
+                </a>
+                <a href="page7-search.html">
+                    <i class="fa fa-search"></i>
+                </a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i> </a>
+
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+
+
+    <!--  ********************   page heading  ********************* -->
+    <div class="container">
+        <div class="heading-container">
+            <h2>Shopping Cart</h2>
+        </div>
+    </div>
+
+
+
+    <!--  ****************** bod section  ***************** -->
+
+    <div class="container">
+        <div class="grid-container">
+            <div class="grid-item">
+                <p>No.</p>
+            </div>
+            <div class="grid-item">
+                <p>Image</p>
+            </div>
+            <div class="grid-item">
+                <p>Details</p>
+            </div>
+            <div class="grid-item">
+                <p>Cost</p>
+            </div>
+        </div>
+        <div class="grid-container" style="border-bottom: 1px solid #d6d6d6;">
+            <div class="grid-item">1.</div>
+            <div class="grid-item">
+                <img src="./imgs/CRAIG.jpg" alt="" style="width: 80%;">
+            </div>
+            <div class="grid-item">
+                <div class="grid-subcontainer">
+                    <div class="grid-text">
+                        <p>Title</p>
+                    </div>
+                    <div class="grid-text">
+                        <p>Jetty</p>
+                    </div>
+                    <div class="grid-text">
+                        <p>Artist</p>
+                    </div>
+                    <div class="grid-text">
+                        <p>Craig Patton</p>
+                    </div>
+                </div>
+                <div class="grid-text" style="width: 100%;">
+                    <p>A5 with Frame</p>
+                </div>
+            </div>
+
+            <div class=" grid-item">$$
+            </div>
+        </div>
+        <div class="grid-container" style="border-bottom: 1px solid #d6d6d6;">
+            <div class="grid-item">2.</div>
+            <div class="grid-item">
+                <img src="./imgs/JASON.jpg" alt="" style="width: 80%;">
+            </div>
+            <div class="grid-item">
+                <div class="grid-subcontainer">
+                    <div class="grid-text">
+                        <p>Title</p>
+                    </div>
+                    <div class="grid-text">
+                        <p>Bethell’s beach</p>
+                    </div>
+                    <div class="grid-text">
+                        <p>Artist</p>
+                    </div>
+                    <div class="grid-text">
+                        <p>Jason law</p>
+                    </div>
+                </div>
+                <div class="grid-text" style="width: 100%;">
+                    <p>A5 with Frame</p>
+                </div>
+            </div>
+
+            <div class=" grid-item">$$
+            </div>
+        </div>
+        <div class="grid-container" style="border-bottom: 1px solid #d6d6d6;">
+            <div class="grid-item">3.</div>
+            <div class="grid-item">
+                <img src="./imgs/10.jpg" alt="" style="width: 80%;">
+            </div>
+            <div class="grid-item">
+                <div class="grid-subcontainer">
+                    <div class="grid-text">
+                        <p>Title</p>
+                    </div>
+                    <div class="grid-text">
+                        <p>Shadows on the golden</p>
+                    </div>
+                    <div class="grid-text">
+                        <p>Artist</p>
+                    </div>
+                    <div class="grid-text">
+                        <p>christopher Thompson</p>
+                    </div>
+                </div>
+                <div class="grid-text" style="width: 100%;">
+                    <p>A5 with Frame</p>
+                </div>
+            </div>
+            <div class=" grid-item">$$
+            </div>
+        </div>
+        <div class="column-right">
+            <div class="grid-container" style="padding-right: 3vmax;">
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item">
+                    <span>Total Cost</span>
+                </div>
+                <div class="grid-item">
+                    <span>$$</span>
+                </div>
+            </div>
+
+            <ul class=" shopping-button">
+                <a href=" #">
+                    <li class="black-link">
+                        Download</li>
+                </a>
+
+                <a href="#" style="background-color: #f2f2f2; color: black;">
+                    <li class="white-link">Make Payment</li>
+                </a>
+
+            </ul>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--  ********************  footer ********************* -->
+    <div class="container clearfix">
+        <div class="footer-top clearfix">
+            <div class="footer-column-left">
+                <a href="page2-artists.html">
+                    <h4>Artist</h4>
+                </a>
+                <a href="page4-collection.html">
+                    <h4>Collection</h4>
+                </a>
+                <a href="page5-about.html">
+                    <h4>About</h4>
+                </a>
+                <a href="page6-contact.html">
+                    <h4>Contact</h4>
+                </a>
+            </div>
+            <div class="footer-column-right">
+                <a href="page1-homepage.html">
+                    <h1><img src="./Logo_img.png" style="width: 13rem; margin: 0 -1rem 0 0" alt=""></h1>
+                </a>
+                <div class="footer-icon">
+                    <a href="https://www.facebook.com/ThePictureLounge/"><i class="fa fa-facebook-square"></i></li>
+                    </a>
+                    <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bot clearfix">
+            <sub>ll images © The Picture lounge - NZ Photographers Gallery.</sub>
+
+            <sub>All Rights Reserved. All images remain the exclusive Copyright of the individual photographers and
+                may
+                not
+                be used in any way without the express written authorisation of the respective photographers. Please
+                direct
+                any enquiries to gallery@thepicturelounge.co.nz</sub>
+
+            <sub> NB: If We (The Picture Lounge) are shipping your purchase to a destination outside of New ealand,
+                we
+                are
+                not responsible nor liable for any local taxes, duties or customs charges you may incur at point of
+                entry.
+                Any costs or liability subsequent to the transaction are wholly the responsibility of the Purchaser.
+            </sub>
+        </div>
+
+    </div>
+</body>
+
+</html>

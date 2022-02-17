@@ -1,0 +1,444 @@
+        h1,h2,h3,h4,h5,i, sub{
+        color: #d6d6d6;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h1 {
+            font-size: calc(0.5rem + 3.2vmin);
+        }
+
+        h2 {
+            font-size: calc(0.5rem + 3vmin);
+            font-weight: 400;
+            margin: 0.5rem 0;
+        }
+
+        h3 {
+            font-size: calc(0.5rem + 2.8vmin);
+        }
+
+        h4 {
+            font-size: calc(0.5rem + 1.3vmin);
+            font-weight: 300;
+            margin: 1rem 0;
+        }
+        h5 {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin: 1rem 0;
+        }
+
+        p {
+            font-family:serif;
+            font-size: calc(0.8rem + 0.1vmin);
+            font-weight: 300;
+            line-height: calc(1rem + 0.3vmin);
+            margin: 0.5rem 0;
+        }
+
+        sub {
+            font-size: calc(0.4rem + 0.5vmin);
+            line-height: 1vmin;
+        }
+
+        span {
+            font-size: calc(0.5rem + 1.5vmin);
+            font-weight: 300;
+        }
+
+
+        * {
+            box-sizing: border-box;
+            background-color: black;
+           /* border: lightblue 0.5px solid; */
+        }
+
+        body {
+            margin: 0;
+            color: #d6d6d6;
+        }
+            
+
+        /* Clearfix (clear floats) */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Change color on hover */
+        a:hover {
+            color: grey;
+        }
+
+        a {
+            text-decoration: none;
+            color: #d6d6d6;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .container {
+            display: block;
+            width: 100%;
+            max-width: device-width;
+            padding: calc(0.5rem + 2.5vmin) calc(2rem + 6vmin);
+        }
+
+
+        .heading-container {
+            display: block;
+            width: 100%;
+            max-width: device-width;
+            padding: calc(0.5rem + 2.5vmin) 0;
+            border-top: 1px solid #d0d0d0;
+            border-bottom: 1px solid #d0d0d0;
+        }
+        .paragraph {
+            display: block;
+            width: 100%;
+            max-width: device-width;
+            padding: calc(2rem + 2vmin);
+        }
+
+
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 1100px) {
+            
+            .container {
+                display: block;
+                width: 100%;
+                max-width: device-width;
+                padding: calc(0.5rem + 1vmin) calc(0.5rem + 2vmax);
+            }
+
+         
+            
+            .prev,
+            .next,
+            .text {
+                font-size: 11px;
+            }
+       
+        }
+        
+    
+
+/* ----------------------------------------------------- */
+/* ----------------    Navigation    ------------------- */
+/* ----------------------------------------------------- */
+
+
+        /* ---------    top navigation bar   ------------*/
+        @media only screen and (max-width: 520px) {
+            .botnav {
+                display: none;
+            }
+        }
+
+        /* ------------------ */
+            .topnav {
+                overflow: hidden;
+                padding: 0px calc(2rem + 6vmin);
+                height: 30px
+            }
+
+            /* Style the topnav links */
+            .topnav-left a {
+                float: left;
+                display: block;
+                color: #d6d6d6;
+                text-align: center;
+                padding: 0.5rem 1rem 0.5rem 0;
+                text-decoration: none;
+            }
+
+            .topnav-right a {
+                float: right;
+                display: block;
+                color: #d6d6d6;
+                text-align: right;
+                padding: 0.5rem 0 0.5rem 1rem;
+                text-decoration: none;
+            }
+
+        @media only screen and (min-width: 520px) {
+            /* Style the bottom navigation bar */
+            .botnav {
+                overflow: hidden;
+                height: calc(2rem + 6vmax);
+                padding: 0rem calc(2rem + 6vmin);
+                position: relative;
+
+            }
+
+            /* Style the botnav links */
+            .botnav-left a {
+                float: left;
+                display: block;
+                color: #d6d6d6;
+                text-align: center;
+                padding: 0.5rem 1rem 0.5rem 0;
+                text-decoration: none;
+
+            }
+
+            .botnav-right a {
+                float: right;
+                display: block;
+                position: absolute;
+                top: -2rem;
+                right: calc(2rem + 6vmin);
+                
+            }
+        }
+                /* ------     mobile menu     ------- */
+
+            @media only screen and (min-width: 520px) {
+
+                .mobile-container {
+                    display: none;
+                }
+            }
+
+        
+        @media only screen and (max-width: 520px) {
+
+            .mobile-container {
+                max-width: 480px;
+                margin: auto;
+            }
+
+            .mobilenav {
+                overflow: hidden;
+                background-color: #333;
+                position: relative;
+                
+
+            }
+
+            .mobilenav #myLinks {
+                display: none;
+            }
+
+            .mobilenav a {
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                display: block;
+            }
+
+            .mobilenav a.icon {
+                background: black;
+                display: block;
+                position: absolute;
+                right:calc(0.5rem + 2vmin);
+                top: 1rem;
+                font-size: 28px;
+            }
+
+            .active {
+                background-color: black;
+                color: #d6d6d6;
+            }
+        }
+
+        /* ------------      footer     ------------- */
+
+        .footer-top {
+            padding: 2rem 0 4rem 0;
+            border-top: #d6d6d6 1px solid;
+            border-bottom: #d6d6d6 1px solid;
+        }
+
+        .footer-column-left {
+            float: left;
+            width: 30%;
+
+        }
+
+        .footer-column-right {
+            float: right;
+            display: block;
+        }
+
+        .footer-icon a {
+            float: right;
+            color: white;
+            padding: 0 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .footer-bot {
+            display: block;
+            width: 100%;
+            max-width: device-width;
+            padding: 1rem;
+        }
+        @media only screen and (max-width: 1100px) {
+        .topnav {
+                    overflow: hidden;
+                    padding: 0px calc(0.5rem + 2vmax);
+                    height: 30px
+                }
+        .botnav {
+                    overflow: hidden;
+                    height: calc(2rem + 8vmin);
+                    padding: 0rem calc(0.5rem + 2vmax);
+                    position: relative;
+
+                }
+        .botnav-right a {
+                    float: right;
+                    display: block;
+                    position: absolute;
+                    top: -1rem;
+                    right: calc(0.5rem + 2vmax);
+                }
+                
+        }
+
+/* ----------------------------------------------------- */
+/* ------------------    slider    --------------------- */
+/* ----------------------------------------------------- */
+        .mySlides {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: device-width;
+            position: relative;
+            padding: 0 calc(2rem + 6vmin);
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .slideshow-container {
+                max-width: device-width;
+                position: relative;
+                padding: 0 calc(0.5rem + 2vmax);
+            }
+        }
+       
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            bottom: 5%;
+            width: auto;
+            padding: 0 calc(2rem + 6vmin);
+            margin: 0 0.5rem;
+            color: white;
+            font-weight: normal;
+            font-size: 1.5rem;
+            user-select: none;
+            background-color: transparent;
+            border: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            color: #dfdfdf;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 0.5rem;
+            width: 0.5rem;
+            margin: 0 2px;
+            background-color: white;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+
+
+/* -----------------    shopping button   ------------------ */
+/* -----------------    black & white     ------------------ */
+        .description-column-left {
+                    float: left;
+                    width: 60%;
+                }
+
+        .description-column-right {
+            float: right;
+            display: block;
+            width: 40%;
+            padding: 0 3rem;
+
+        }
+        ul.shopping-button {
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .shopping-button li {
+            text-align: center;
+            padding: calc(0.5rem + 0.5vmin) calc(0.5rem + 1vmin);
+            margin: 1rem 0 2rem 0;
+            list-style-type: none;
+        }
+
+        .white-link {
+            background-color: #f2f2f2;
+        }
+
+        .black-link {
+            border: 1px solid #f2f2f2;
+        }
